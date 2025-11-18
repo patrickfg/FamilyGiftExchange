@@ -2,6 +2,9 @@ using GiftExchange;
 
 namespace GiftExchange.Interfaces;
 
+/// <summary>
+/// Defines the contract for a participant in the gift exchange, including their personal information, exclusions, and assigned recipient.
+/// </summary>
 public interface IParticipant {
     int Id { get; }
     string FirstName { get; }
