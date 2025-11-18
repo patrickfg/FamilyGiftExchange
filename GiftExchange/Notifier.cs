@@ -1,6 +1,6 @@
 ﻿namespace GiftExchange;
 
-public class Class1
+public class Notifier
 {
 
 }

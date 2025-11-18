@@ -15,6 +15,17 @@ public class Participant : IParticipant
         WishListURL = wishListURL;
         SpouseName = spouseName;
     }
+
+    public Participant(ParticipantRecord record)
+    {
+        Id = record.Id;
+        FirstName = record.FirstName;
+        LastName = record.LastName;
+        PhoneNumber = record.PhoneNumber;
+        WishListURL = record.WishListURL;
+        SpouseName = record.SpouseName;
+    }
+    
     public int Id { get; }
 
     public string FirstName { get; }
