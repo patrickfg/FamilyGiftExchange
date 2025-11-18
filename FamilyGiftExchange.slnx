@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="fgx/fgx.csproj" />
+  <Project Path="GiftExchange.Tests/GiftExchange.Tests.csproj" />
+  <Project Path="GiftExchange/GiftExchange.csproj" />
+</Solution>
