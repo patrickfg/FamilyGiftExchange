@@ -5,6 +5,12 @@ namespace GiftExchange.Interfaces;
 /// </summary>
 public interface IParticipantSource {
     IParticipant[] GetParticipants();
-    void LoadParticipants(string fileName);
-    void SaveParticipants(string fileName);
+
+	void AddParticipant(IParticipant participant);
+
+	void LoadParticipants(string fileName);
+	
+	void RemoveParticipant(IParticipant participant);
+    
+	void SaveParticipants(string fileName);
 }
