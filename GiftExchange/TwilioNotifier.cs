@@ -3,7 +3,7 @@ using Serilog;
 
 namespace GiftExchange;
 
-internal class TwilioNotifier : INotifier {
+public class TwilioNotifier : INotifier {
 	private readonly TwilioConfiguration _configuration;
 	private readonly IMessageBuilder _messageBuilder;
 
@@ -26,6 +26,7 @@ internal class TwilioNotifier : INotifier {
 		}
 
 		string message = _messageBuilder.CreateMessage(participant);
+		SendMessage(participant, message);
 	}
 
 	private void SendMessage(IParticipant participant, string message) {
@@ -46,5 +47,6 @@ internal class TwilioNotifier : INotifier {
 		);
 
 		Log.Information("Message sent to {PhoneNumber}. SID: {MessageSid}", toPhoneNumber, messageResource.Sid);
+		Thread.Sleep(_configuration.DelayBetweenMessagesInMilliseconds);
 	}
 }

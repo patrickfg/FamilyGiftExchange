@@ -36,4 +36,5 @@ public class TwilioConfiguration {
 	[JsonIgnore]
 	public string TwilioAuthToken => Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN") ?? throw new ArgumentNullException(nameof(TwilioAuthToken));
 
+	public int DelayBetweenMessagesInMilliseconds { get; internal set; } = 1250;
 }

@@ -6,6 +6,7 @@ public class GiftExchangeTests {
 	[SetUp]
 	public void Setup() {
 		TestLogger.Initialize();
+
 	}
 
 	[Test]
